@@ -10,23 +10,21 @@
 1. Paste a link to of your Fork on Canvas and submit
 
 
-## Question 1
+## Question 1 DONE
 
 Write code that prints all the numbers from 1 to 150, **inclusive.**
 
 Answer:
 ```swift
 let range = 1...150
-var values = 0
 
-for _ in range {
-values += 1
-print(values)
+for i in range {
+print(i)
 }
 ```
 
 ***
-## Question 2
+## Question 2 DONE
 
 Write code that prints all the numbers from 142 to 159, **exclusive.**
 
@@ -40,7 +38,7 @@ print(i)
 ```
 
 ***
-## Question 3
+## Question 3 DONE
 
 Write code that prints only the even numbers from 15 to 80, **inclusive.**
 
@@ -54,7 +52,7 @@ print(number)
 ```
 
 ***
-## Question 4
+## Question 4 DONE
 
 Write code that prints only the odd numbers from 19 to 51, **inclusive.**
 
@@ -68,21 +66,21 @@ print(number)
 ```
 
 ***
-## Question 5
+## Question 5 DONE
 
 Write code that prints all the numbers that end in a **5** from 1 to 100, **exclusive.**
 
 Answer:
 ```swift
-let range = 19...51
+let range = 1..<100
 
-for number in range where number % 2 == 1 {
+for number in range where number % 10 == 5 {
 print(number)
 }
 ```
 
 ***
-## Question 6
+## Question 6 DONE
 
 Write code that prints all the numbers that end in a 7 from 1 to 40, **inclusive.**
 
@@ -96,7 +94,7 @@ print(number)
 ```
 
 ***
-## Question 7
+## Question 7 DONE
 
 Given a range of numbers from 20 to 150 inclusive, print out all the numbers that follows these conditions:
 
@@ -112,7 +110,7 @@ print(number)
 ```
 
 ***
-## Question 8
+## Question 8 DONE
 
 Given a range of numbers from 20 to 150 inclusive, print out all the numbers that follows these conditions:
 
@@ -128,7 +126,7 @@ print(number)
 ```
 
 ***
-## Question 9
+## Question 9 DONE
 
 Given a range of numbers from 20 to 150 inclusive, print out all the numbers that follows these conditions:
 
@@ -144,7 +142,7 @@ print(number)
 ```
 
 ***
-## Question 10
+## Question 10 DONE
 
 Given a range of numbers from 20 to 150, print out all the numbers that follows these conditions:
 
@@ -160,7 +158,7 @@ print(i)
 ```
 
 ***
-## Question 11
+## Question 11 DONE
 
 Without using Xcode, how many times will the loop below run?  Explain why.
 
@@ -174,11 +172,11 @@ while (i > 3) {
 // Your explanation here
 ```
 Answer:
-The loop will run indefinitely. The while loop condition indicates that the variable "i" must be greater than 3 to run. The variable "i" starts at 5 and is greater than 3, so it will initiate the while loop. Since the operator "i += 1" continues to add 1 to "i", the variable will always be larger than 3 and will continue to run indefinitely.
+The loop will run indefinitely. The while loop condition indicates that the variable "i" must be greater than 3 to run. The variable "i" starts at 5 and is greater than 3, so it will initiate the while loop. Since the operation "i += 1" continues to add 1 to "i", the variable will always be larger than 3 and will continue to run indefinitely.
 
 
 ***
-## Question 12
+## Question 12 DONE
 
 Change the code below to make the loop stop executing when it reaches 9.
 
@@ -188,22 +186,20 @@ var i = 5
 while (i > 3) {
     i += 1
 }
+```
 
-//Answer:
-
+Answer:
+```swift
 var i = 5
 
-while (i > 3) {
-if i < 9 {
-i += 1
+while (i > 3) && (i <= 9) {
 print(i)
+i += 1
 }
-}
-
 ```
 
 ***
-## Question 13
+## Question 13 DONE
 
 Change the code below to make the loop stop executing after it has run 1,000 times.
 
@@ -213,19 +209,22 @@ var i = 5
 while (i > 3) {
     i += 1
 }
+```
 
-//Answer:
-
+Answer:
+```swift
 var i = 5
+var counter = 0
 
-while (i > 3) && (i < 1005) {
+while (i > 3) && (counter < 1000) {
+counter += 1
 i += 1
 print(i)
 }
 ```
 
 ***
-## Question 14
+## Question 14 DONE
 
 Change the code below to make the loop stop executing after it has run 1,000 times and also make it print out the current value of i **only if i is an even number.**
 
@@ -235,12 +234,15 @@ var i = 5
 while (i > 3) {
     i += 1
 }
+```
 
-//Answer:
-
+Answer:
+```swift
 var i = 5
+var counter = 0
 
-while (i > 3) && (i < 1005) {
+while (i > 3) && (counter < 1000) {
+counter += 1
 i += 1
 if i % 2 == 0 {
 print(i)
@@ -249,7 +251,7 @@ print(i)
 ```
 
 ***
-## Question 15
+## Question 15 DONE
 
 What's the difference in syntax between the following two while loops?  Will their outputs be different?  Explain why or why not.
 
@@ -273,7 +275,7 @@ Answer:
 Loop one uses a while loop stating that while the variable "i" is less than or equal to 10, it will print the string with string interpolation "i = \(i)" and loops the operation "i += 1". The output will print on loop until i = 10. Loop two uses a repeat loop with a while condition indicating that the loop repeats printing "i = \(i)" the the operation "i += 1". The while condition indicates that the repeat loop runs as long as i is less than or equal to 10. Both loops will produce the same output because both are loops that increase i by 1, the conditions that i is less than or equal to 10 is the same, and the printed language remains the same.
 
 ***
-## Question 16
+## Question 16 DONE
 
 What's the difference between `break` and `continue`?  Give an example that demonstrates their differences.
 
@@ -304,7 +306,7 @@ print("This number is not 4: \(iDontWantFour).")
 
 
 ***
-## Question 17
+## Question 17 DONE
 
 Without using Xcode, what will the loop below print? Select all that apply.
 
@@ -332,7 +334,7 @@ for i in 1...10 {
 Answer: 
 1, 2, 3, 8, 9, 10
 ***
-## Question 18
+## Question 18 DONE
 
 Without using Xcode, what will the loop below print? Select all that apply.
 
@@ -360,7 +362,7 @@ Answer:
 1, 2, 3
 
 ***
-## Question 19
+## Question 19 DONE
 
 Without using Xcode, what will the loop below print?  Explain below.
 
@@ -380,30 +382,47 @@ x = 1, y = 1
 x = 2, y = 1
 x = 3, y = 1
 
+For x = 1 in the outerloop, the innerloop assigns y = 1 then prints "x = \(x), y = \(y)", which is x = 1, y = 1. The program runs in the next number in the range for the innerloop while x is still 1. Since y = 2, the program continues (stops running after the continue) and returns back to the start of the program where the outerloop is x = 2 and the innerloop where y = 1 and prints "x = \(x), y = \(y)", which is x = 2, y = 1. Since y = 2 again within x = 2, the program continues and goes back to the outerloop where x = 3. The program goes into the innerloop, assigning y = 1, and  prints "x = \(x), y = \(y)", which is x = 3, y = 1. The program continues at y = 2 but since the range ends at 3, the program stops.
+
 
 ***
-## Question 20
+## Question 20 DONE
 
 Write code that prints out all the points in the area bounded by (0,0), (10,0), (0,10) and (10,10) **where** x and y are both integers.
 
 Answer:
 ```swift
-for x in 0...10 {
-for y in 0...10 {
-print("(\(x), \(y))")
+let range = 0...10
+
+outer: for x in range {
+inner: for y in range {
+print("(\(x),\(y))", terminator:" ")
+}
+print("")
+}
+
+//or using tuples
+let range = 0...10
+
+for x in range {
+for y in range {
+let tuple = (x,y)
+print(tuple)
 }
 }
 ```
 
 ***
-## Question 21
+## Question 21 DONE
 
 Write code that prints out all the points in the area bounded by (0,0), (10,0), (0,10) and (10,10) **where** the difference of x and y is at least 5, and x and y are both integers.
 
 Answer:
 ```swift
-outerloop: for x in 0...10 {
-innerloop: for y in 0...10 {
+let range = 0...10
+
+outerloop: for x in range {
+innerloop: for y in range {
 if abs(y - x) < 5 {
 continue outerloop
 }
@@ -413,7 +432,7 @@ print("(\(x), \(y))")
 ```
 
 ***
-## Question 22
+## Question 22 DONE
 
 Print the first `N` square numbers. A **square number**, also called perfect square, is an integer that is obtained by squaring some other integer; in other words, it is the product of some integer with itself (ex. 1 = 1*1, 4 = 2 * 2, 9 = 3* 3 …).
 
@@ -430,7 +449,6 @@ Output:
 ```
 
 Answer:
-
 ```swift
 var N = 5
 let range = 1...N
@@ -442,7 +460,7 @@ print(squareNum*squareNum)
 ```
 
 ***
-## Question 23 *****
+## Question 23 DONE
 
 Given an integer N draw a square of N x N asterisks. Look at the examples.
 
@@ -471,7 +489,7 @@ Try printing a single line of * first.
 Hint 2
 You can use print("") to print an empty line.
 
-
+Answer:
 ```swift
 var N = 3
 
